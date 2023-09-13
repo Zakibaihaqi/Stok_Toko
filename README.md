@@ -51,7 +51,8 @@ https://mystoktoko.adaptable.app/main/
 	-lakukan add, commit, dan push ke repositori github
 
 
-2)
+2)![bagan (1)_page-0001](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/221d42cc-1e73-4eb5-ba00-c9cc02ed5b54)
+
 
 
 3)Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
