@@ -138,5 +138,19 @@ JSON sering digunakan dalam pertukaran data antara aplikasi web modern karena me
 	-buka urls yang ada di folder main import fungsi show_xml, show_json, show_xml_by_id, show_json_by_id yang telah dibuat
 	-tambahkan path url ke dalam urlpatterns untuk setiap fungsi
 
-=======
->>>>>>> e993597c5ba9b8db71aeeb3dddab92f556810824
+![Screenshot (11)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/86a172f0-9aea-4a4d-a642-782c5caef33c)
+
+![Screenshot (16)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/37d60cce-761d-43f4-a3d0-42017ce0a2ef)
+
+![Screenshot (17)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/4cb17e23-41c9-48d7-9f5c-6adb11475298)
+
+![Screenshot (15)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/0cc895dd-e037-4c6c-8c23-584716a64817)
+
+![Screenshot (14)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/31701449-441b-4ace-a441-a2258dbe2ace)
+
+
+
+
+
+
+
