@@ -51,7 +51,8 @@ https://mystoktoko.adaptable.app/main/
 	-lakukan add, commit, dan push ke repositori github
 
 
-2)
+2)![bagan (1)_page-0001](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/221d42cc-1e73-4eb5-ba00-c9cc02ed5b54)
+
 
 
 3)Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
@@ -83,6 +84,7 @@ ViewModel: Ini adalah bagian yang membantu menghubungkan Model dan View. Ini mem
 
 
 Di Django, kita akan menggunakan MVT. Django adalah kerangka kerja yang menyederhanakan proses pengembangan web dengan cara yang terstruktur. Itu membuatnya lebih mudah bagi Anda untuk mengatur bagian Model (data), View (tampilan), dan Template (tampilan HTML) dalam proyek web kita.
+<<<<<<< HEAD
 
 
 
@@ -136,3 +138,5 @@ JSON sering digunakan dalam pertukaran data antara aplikasi web modern karena me
 	-buka urls yang ada di folder main import fungsi show_xml, show_json, show_xml_by_id, show_json_by_id yang telah dibuat
 	-tambahkan path url ke dalam urlpatterns untuk setiap fungsi
 
+=======
+>>>>>>> e993597c5ba9b8db71aeeb3dddab92f556810824
