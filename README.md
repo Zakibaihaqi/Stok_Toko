@@ -83,3 +83,56 @@ ViewModel: Ini adalah bagian yang membantu menghubungkan Model dan View. Ini mem
 
 
 Di Django, kita akan menggunakan MVT. Django adalah kerangka kerja yang menyederhanakan proses pengembangan web dengan cara yang terstruktur. Itu membuatnya lebih mudah bagi Anda untuk mengatur bagian Model (data), View (tampilan), dan Template (tampilan HTML) dalam proyek web kita.
+
+
+
+TUGAS 3
+
+1)Apa perbedaan antara form POST dan form GET dalam django?
+POST
+  -Nilai variabel tidak ditampilkan di URL
+  -Lebih aman
+  -Tidak dibatasi panjang string
+  -Biasanya untuk input data melalui form
+  -Digunakan untuk mengirim data-data penting seperti password
+
+GET
+  -Nilai variabel ditampilkan di URL sehingga user dapat dengan mudah memasukkan nilai variabel baru
+  -Kurang aman
+  -Dibatasi panjang string sampai 2047 karakter
+  -Biasanya untuk input data melalui link
+  -Digunakan untuk mengirim data-data tidak penting
+
+2)Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+
+--HTML adalah blok utama untuk pengembangan web dan biasanya digunakan untuk menentukan struktur page
+--XML adalah bahasa markup dan menggunakan struktur tag untuk mewakili item data
+--JSON adalah pasangan yang berisi key-value untuk membuat struktur seperti map yang didasarkan pada javascript
+
+
+3)Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+
+JSON sering digunakan dalam pertukaran data antara aplikasi web modern karena memiliki sintaks yang sederhana dan mudah dipahami, format data yang ringan, JSON juga mendukung berbagai tipe data dasar, mendukung nesting, terintegrasi dengan JavaScript, dan masih banyak lagi.
+
+4)
+
+   *Membuat input form untuk menambahkan objek model pada app sebelumnya
+	-merubah path 'main/' menjadi ''
+	-membuat kerangka views dan hubungkan dengan views pada main
+	-buat file baru dengan untuk forms dan buat kelas ProductForm
+	-import kelas ProductForm pada views
+	-buat fungsi baru untuk membuat item baru berdasarkan request.POST
+	-masukkan item pada fungsi show_main pada views
+	-pada main views import create_product dan tambahkan pula path
+	-buat file baru dengan nama create_product.html di templates
+   *Tambahkan 5 fungsi views untuk melihat objek yang sudah ditambahkan dalam format HTML,XML,JSON,XML by ID, dan JSON by ID
+	-import HttpResponse dari django.http dan serializers dari django.core pada views di direktori main
+	-buat fungsi show_xml
+	-masukkan data setelah itu return
+	-buat fungsi yang kurang lebih sama untuk json
+	-buat fungsi show_xml_by_id dan tambahkan parameter untuk id
+	-buat fungsi yang sama untuk show_json_by_id
+   *Membuat routing URL untuk masing-masing views yang telah ditambahkan pada poin 2
+	-buka urls yang ada di folder main import fungsi show_xml, show_json, show_xml_by_id, show_json_by_id yang telah dibuat
+	-tambahkan path url ke dalam urlpatterns untuk setiap fungsi
+
