@@ -139,6 +139,15 @@ JSON sering digunakan dalam pertukaran data antara aplikasi web modern karena me
 	-tambahkan path url ke dalam urlpatterns untuk setiap fungsi
 
 
+![Screenshot (11)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/8f661ccc-9fab-49db-83f0-ec3f5e11f056)
+![Screenshot (16)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/23cba88c-145d-47f5-8a37-a4b8ee849ffb)
+![Screenshot (17)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/4dd7b813-abc3-405d-9bba-557aa0057543)
+![Screenshot (15)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/a51f3749-689a-452c-bba6-ac66922e879d)
+![Screenshot (14)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/a8a67348-a7ca-4ad6-9fb3-60dcbb46f8c3)
+
+
+
+
 
 
 Tugas 4
