@@ -138,19 +138,77 @@ JSON sering digunakan dalam pertukaran data antara aplikasi web modern karena me
 	-buka urls yang ada di folder main import fungsi show_xml, show_json, show_xml_by_id, show_json_by_id yang telah dibuat
 	-tambahkan path url ke dalam urlpatterns untuk setiap fungsi
 
-![Screenshot (11)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/86a172f0-9aea-4a4d-a642-782c5caef33c)
-
-![Screenshot (16)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/37d60cce-761d-43f4-a3d0-42017ce0a2ef)
-
-![Screenshot (17)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/4cb17e23-41c9-48d7-9f5c-6adb11475298)
-
-![Screenshot (15)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/0cc895dd-e037-4c6c-8c23-584716a64817)
-
-![Screenshot (14)](https://github.com/Zakibaihaqi/Stok_Toko/assets/112550171/31701449-441b-4ace-a441-a2258dbe2ace)
 
 
 
+Tugas 4
 
+1)Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
 
+-UserCreationForm adalah salah satu komponen dalam django yang digunakan untuk membuat formulir pendaftaran pengguna. Form ini digunakan untuk mengumpulkan informasi pengguna seperti username dan password 
+-Kelebihan yang dimiliki UserCreationForm diantara lain, terdapat validasis untuk memastikan informasi yang dimasukkan pengguna sesuai dengan ketentuan minimal seperti kata sandi yang cukup kuat, dan form otentifikasi yang sudah terintegrasi dengan django.
+-kekurangan yang dimiliki UserCreationForm diantara lain, UserCreationForm tidak dapat menjamin keamanan, tampilan UserCreationForm memiliki tampilan baku yang perlu disesuaikan dengan desain dan tampilan aplikasi.
 
+2)Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+-Autentikasi merupakan proses verifikasi identitas pengguna. Autentikasi dilakukan dengan menggunakan sistem otentikasi bawaan yang mencakup pengguna(user) dan sesi(session).
+-Otorisasi merupakan proses mengendalikan apa yang dapat diakses oleh pengguna yang terautentikasi. Otorisasi dapat mengatur hak akses dan izin pengguna terhadap sumber daya atau tindakan dalam aplikasi.
+-Autentikasi penting untuk memastikan bahwa setiap pengguna yang masuk merupakan pengguna yang sah dan otorisasi penting untuk memastikan pengguna yang sudah diautentikasi memiliki akses yang dibatasi.
 
+3)Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+-Cookies adalah data yang disimpan pada sisi klien(pengguna) dan digunakan oleh server web untuk mengidentifikasi dan melacak informasi tertentu terkait sesi atau pengguna pada aplikasi web
+-berikut cara django menggunakan cookies
+   *memulai sesi pengguna
+	ketika pengguna mengakses situs web django, server akan membuat sesi pengguna yang unik. Sesi pengguna ini digunakan untuk menyimpan data sesi
+   *menyimpan data dalam cookie
+	Django akan menyimpan data sesi pengguna dalam cookie dengan cara yang aman
+   *mengambil data sesuai keperluan
+	ketika pengguna membuat permintaan ke server, Django akan mengambil data sesi yang sesuai dari cookie dan membuatnya tersedia untuk pengolahan dalam kode aplikasi
+   *menyimpan perubahan ke cookie
+	Jika data sesi pengguna berubah selama sesi, Django akan mengganti cookie sesi dengan yang baru, jika diperlukan, untuk mencerminkan perubahan tersebut.
+   *mengakhiri sesi pengguna
+	Saat sesi pengguna berakhir, cookie sesi akan dihapus atau diabaikan, dan data sesi tidak lagi tersedia.
+
+4)Apakah pengguna cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+terdapat beberapa hal yang harus diwaspadai:
+   -Penyalahgunaan cookies
+	cookies dapat digunakan untuk berbagai kemungkinan, seperti untuk menampilkan yang sesuai dengan preferensi pengguna dengan tujuan pengguna mengklik iklan
+   -Pencurian cookies
+	penyerang yang berhasil mencuri cookies pengguna dapat melakukan aksi atas nama pengguna yang sah
+
+5)Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step
+*Mengimplementasikan fungsi registrasi, login, dan logout untuk memungkinkan pengguna mengakses aplikasi dengan lancar
+   -import redirect, UserCreationForm, messages pada views di dalam direktori main
+   -buat fungsi untuk registrasi
+   -buat template registrasi pada direktori main/template
+   -tambahkan fungsi dan path register pada urls
+   -import authenticate dan login di views pada direktori main
+   -buat fungsi login
+   -buat template login pada direktori main/template
+   -tambahkan fungsi dan path login pada urls
+   -import logout pada views
+   -buat fungsi logout
+   -tambahkan button logout pada template main
+   -tambahkan fungsi dan path logout pada urls
+   -import login_required pada views
+   -tambahkan @login_required
+
+*Membuat dua akun pengguna dengan masing-masing tiga dummy data menggunakan model yang telah dibuat pada aplikasi sebelumnya untuk setiap akun di lokal
+   -buka cmd
+   -arahkan pada direktori project dan nyalakan environment
+   -jalankan program dengan python manage.py runserver
+   -lakukan registrasi untuk dua akun
+   -tambahkan pada setiap akun masing-masing tiga data
+
+*Menghubungkan model item dengan user
+   -import User pada models di dalam direktori main
+   -tambahkan user = models.ForeignKey pada fungsi item
+   -tambahkan item.user pada fungsi create_item di dalam views
+   -filter item pada show_main
+   -lakukan migrasi model
+
+*Menampilkan detail informasi pengguna yang sedang logged in seperti username dan menerapkan cookies seperti last login pada halaman utama aplikasi
+   -import datetime pada views 
+   -tambahkan response.set_cookie pada fungsi login_user 
+   -tambahkan last_login pada fungsi show_main
+   -tambahkan response.delete_cookie('last_login;) pada fungsi logout
+   -tambahkan last login pada template main
