@@ -221,3 +221,61 @@ terdapat beberapa hal yang harus diwaspadai:
    -tambahkan last_login pada fungsi show_main
    -tambahkan response.delete_cookie('last_login;) pada fungsi logout
    -tambahkan last login pada template main
+
+
+
+Tugas 5
+
+1)Jelaskan manfaat setiap element selector dan kapan waktu yang tepat untuk menggunakannya
+*Container
+   -container merupakan kelas yang digunakan untuk membuat wadah utama dalam desain responsif. Biasa digunakan saat ingin mengatur konten utama di tengah halaman dan mengendalikan lebar content
+*container-fluid
+   -merupakan kelas yang digunakan untuk membuat wadah utama cocok untuk desain web full-width. Biasa digunakan saat ingin konten ingin mengisi seluruh lebar layar
+*row
+   -merupakan kelas yang digunakan untuk membuat baris di dalam wadah. Digunakan ketika ingin mengelompokkan elemen ke dalam baris
+*col
+   -merupakan kelas yang digunakan untuk membuat kolom dalam baris. Digunakan ketika ingin mengatur tata letak kolom
+*btn
+   -merupakan kelas yang digunakan untuk membuat tombol. Biasa digunakan untuk membuat tombol yang responsif dan konsisten dengan desain
+*navbar
+   -merupakan kelas yang digunakan untuk membuat menu navigasi. Biasa digunakan saat ingin menambahkan menu navigasi ke situs web
+*form-control
+   -merupakan kelas yang digunakan untuk mengubah elemen input seperti teks. Biasa digunakan saat ingin merancang formulir input yang seragam dan mudah diidentifikasi
+
+2)jelaskan HTML5 Tag yang kamu ketahui
+-<header> digunakan untuk mendefinisikan bagian atas dari sebuah dokumen HTML
+-<nav> digunakan untuk mengelompokkan elemen untuk navigasi
+-<video> digunakan untuk menyisipkan video di page web
+-<audio> digunakan untuk menyisipkan audio di page web
+-<footer> digunkan untuk mendefinisikan bagian bawah dari sebuah dokumen atau elemen tertentu
+
+3)jelaskan perbedaan margin dan padding 
+*Margin
+   -margin mengatur ruang di luar elemen
+   -margin tidak mempengaruhi tampilan atau tata letak elemen
+   -margin elemen dapat mempengaruhi elemen-elemen lain disekitar dengan cara mengatur jarak
+   -margin digunakan untuk mengendalikan jarak antara elemen-elemen di luar elemen tersebut
+
+*Padding
+   -padding mengatur ruang di dalam elemen
+   -padding mempengaruhi tampilan elemen itu sendiri
+   -padding tidak mempengaruhi elemen-elemen di luar elemen itu sendiri
+   -padding digunakan untuk mengendalikan ruang di dalam elemen
+
+4)Jelaskan perbedaan antara framework CSS tailwind dan bootstrap. Kapan sebaiknya menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+-Bootstrap memiliki komponen siap pakai, gaya desain yang konsisten, kustomisasi, dan dokumentasi yang kuat
+-Tailwind memiliki Utility-First Approach, ringan, kustomisasi total, dan dokumentasi yang baik
+-Bootstrap lebih cocok digunakan ketika ingin meluncurkan situs dengan cepat dan tidak ingin menghabiskan banyak waktu untuk desain kustom, sementara tailwind lebih cocok digunakan ketika ingin memiliki kontrol lebih besar pada desain dan tidak ingin dibatasi oleh gaya default framework
+
+5)
+*Kustomisasi halaman login, register, dan tambah inventori semenarik mungkin
+   -tambahkan Bootstrap CSS dan juga JS
+   -tambahkan navbar pada base.html dan sesuai navbar sesui keinginan
+   -kustomisasi halaman login,register sesuai keinginan
+   -kustomisasi inventori sesuai keinginan
+
+*kustomisasi halaman daftar inventori menjadi lebih berwarna maupun menggunakan approach lain seperti menggunakan card
+   -tambahkan div class container mt-5 untuk membuat tulisan pada lebih ke tengah
+   -berikan row dan colom pada Name dan Class
+   -Tambahkan border pada table
+   -berikan warna pada button dan text

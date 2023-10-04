@@ -1,42 +1,66 @@
 {% extends 'base.html' %}
 
 {%block content %}
-  <h1>Stok Toko Page</h1>
+  <div class="container mt-5">
+    <h1>Stok Toko Page</h1>
 
-  <h5>Name: </h5>
-  <p>{{ name }}</p>
-  <h5>Class: </h5>
-  <p>{{ class }}</p>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Name: </h5>
+        <p>{{ name }}</p>
+        <h5>Class: </h5>
+        <p>{{ class }}</p>
+      </div>
+    </div>
 
-  <table>
-    <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Description</th>
-    </tr>
-
-    {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
-
-    {% for item in items %}
+    <table class="table table-bordered table-hover mt-4">
+      <thead>
         <tr>
-            <td>{{item.name}}</td>
-            <td>{{item.amount}}</td>
-            <td>{{item.description}}</td>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Action</th>
         </tr>
-    {% endfor %}
-  </table>
+      </thead>
 
-  <br />
+      {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
 
-  <a href="{% url 'main:create_item' %}">
-    <button>
-        Add New Item
-    </button>
-  </a>
-  <a href="{% url 'main:logout' %}">
-    <button>
-      Logout
-    </button>
-    <h5>Sesi terakhir login: {{ last_login }}</h5>
-  </a>
+      {% for item in items %}
+          <tr>
+              <td>{{item.name}}</td>
+              <td>{{item.amount}}</td>
+              <td>{{item.description}}</td>
+              <td>
+                <div class="btn-group" role="group" aria-label="Item Actions">
+                  <a href="{% url 'main:edit_item' item.pk %}">
+                    <button class="btn btn-warning btn-sm me-2">
+                      Edit
+                    </button>
+                  </a>
+                  <a href="{% url 'main:delete_item' item.pk %}">
+                    <button class="btn btn-danger" onclick="return confirm('You sure want to delete this item?');">
+                      Delete
+                    </button>
+                  </a>
+                </div>
+              </td>
+              <tfoot bg-color="#333" text-color="blue"></tfoot>
+          </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <a href="{% url 'main:create_item' %}">
+      <button class="btn btn-primary">
+          Add New Item
+      </button>
+    </a>
+    <a href="{% url 'main:logout' %}">
+      <button class="btn btn-secondary">
+        Logout
+      </button>
+      <h5>Sesi terakhir login: {{ last_login }}</h5>
+    </a>
+  </div>
 {% endblock content %}
